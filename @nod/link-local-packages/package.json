@@ -1,6 +1,6 @@
 {
   "name": "@nod/link-local-packages",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "description": "Reads dependencies and links them if they exist in the given or current path",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,8 @@
     "debug": "^3.1.0",
     "empty-module": "0.0.2",
     "find-root": "^1.1.0",
-    "module-exists": "^0.1.1"
+    "module-exists": "^0.1.1",
+    "npm": "^5.5.1"
   },
   "devDependencies": {
     "ava": "^0.23.0"
