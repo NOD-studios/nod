@@ -1,6 +1,6 @@
 {
   "name": "@nod/link-local-packages",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Reads dependencies and links them if they exist in the given or current path",
   "main": "index.js",
   "scripts": {
