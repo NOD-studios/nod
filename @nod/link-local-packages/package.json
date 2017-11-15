@@ -1,0 +1,37 @@
+{
+  "name": "@nod/link-local-packages",
+  "version": "0.0.0",
+  "description": "Reads dependencies and links them if they exist in the given or current path",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [
+    "npm",
+    "link",
+    "symlink",
+    "local",
+    "dependency",
+    "management"
+  ],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NOD-studios/link-local-packages.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "debug": "^3.1.0",
+    "empty-module": "0.0.2",
+    "find-root": "^1.1.0",
+    "module-exists": "^0.1.1",
+    "npm": "^5.5.1"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0"
+  },
+  "bin": {
+    "link-local-packages": "./bin/index.js"
+  }
+}
