@@ -13,11 +13,11 @@ program
   .action((...args) => {
     const [path, packagePath] = pop(args)
     return linkLocalPackages(path || process.cwd(), packagePath || process.cwd())
-      .then(process.exit(0))
+      .then(() => process.exit(0))
   })
 
 module.exports = program.parse(process.argv)
 
 if (!program.args.length)
   linkLocalPackages(process.cwd(), process.cwd())
-    .then(process.exit(0))
+    .then(() => process.exit(0))

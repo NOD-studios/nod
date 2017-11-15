@@ -54,11 +54,11 @@ const linkLocalPackages = (localPath = cwdPath, packagePath = cwdPath) =>
         npmLoad()
           .then(() => [
             debug('linking %O', {modulePath}),
-            npmLink([path]),
+            npmLink([modulePath]),
           ][1])
           .then(() => [
             debug('linked %O', {modulePath}),
-            path
+            modulePath
           ][1])
       ][1]))
     .then(linkedModules => [
