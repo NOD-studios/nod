@@ -2,7 +2,7 @@
   "name": "@nod/debug-with-package-name",
   "version": "0.0.0",
   "description": "Auto prefixes debug module with package name",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "ava"
   },
@@ -25,7 +25,10 @@
   "dependencies": {
     "@f/tap": "^0.1.0",
     "babel-core": "^6.26.0",
+    "babel-plugin-transform-export-default": "^7.0.0-alpha.20",
     "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "babel-runtime": "^6.26.0",
     "cleanjs": "^1.0.1",
     "debug": "^3.1.0",
     "debug-module-prefix": "^0.2.2",
@@ -34,7 +37,7 @@
   },
   "devDependencies": {
     "ava": "^0.23.0",
-    "babel-register": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "eslint": "^4.11.0",
     "eslint-config-prettier": "^2.7.0",
     "eslint-plugin-better": "^0.1.5",
@@ -57,11 +60,18 @@
   },
   "babel": {
     "presets": [
-      "env"
-    ]
-  },
-  "files": [
-    "index.js",
-    "index.es.js"
-  ]
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ],
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": ["transform-export-default"]
+  }
 }
