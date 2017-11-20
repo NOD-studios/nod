@@ -1,0 +1,67 @@
+{
+  "name": "@nod/debug-with-package-name",
+  "version": "0.0.0",
+  "description": "Auto prefixes debug module with package name",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOD-studios/debug-prefix-package-name.git"
+  },
+  "keywords": [
+    "debug",
+    "prefix",
+    "package",
+    "name"
+  ],
+  "author": "Furkan Tunali <furkan@nod.st>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NOD-studios/debug-prefix-package-name/issues"
+  },
+  "homepage": "https://github.com/NOD-studios/debug-prefix-package-name#readme",
+  "dependencies": {
+    "@f/tap": "^0.1.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cleanjs": "^1.0.1",
+    "debug": "^3.1.0",
+    "debug-module-prefix": "^0.2.2",
+    "eslint-config-cleanjs": "^4.0.0",
+    "read-pkg-up": "^3.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "prettier": "^1.8.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "cleanjs",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "files": [
+    "index.js",
+    "index.es.js"
+  ]
+}
