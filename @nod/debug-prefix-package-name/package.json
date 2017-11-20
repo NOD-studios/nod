@@ -1,6 +1,6 @@
 {
   "name": "@nod/debug-with-package-name",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Auto prefixes debug module with package name",
   "main": "./index.js",
   "scripts": {
@@ -72,6 +72,8 @@
         }
       ]
     ],
-    "plugins": ["transform-export-default"]
+    "plugins": [
+      "transform-export-default"
+    ]
   }
 }
