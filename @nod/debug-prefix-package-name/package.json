@@ -2,9 +2,13 @@
   "name": "@nod/debug-with-package-name",
   "version": "0.1.0",
   "description": "Auto prefixes debug module with package name",
-  "main": "./index.js",
+  "main": "./build/index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava --watch",
+    "test-once": "ava",
+    "build": "backpack",
+    "flow": "flow",
+    "start": "nodemon --watch \"./src\" --exec \"npm run build\""
   },
   "repository": {
     "type": "git",
@@ -23,28 +27,40 @@
   },
   "homepage": "https://github.com/NOD-studios/debug-prefix-package-name#readme",
   "dependencies": {
-    "cleanjs": "^1.0.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "debug": "^3.1.0",
     "debug-module-prefix": "^0.2.2",
-    "eslint-config-cleanjs": "^4.0.0",
     "read-pkg-up": "^3.0.0"
   },
   "devDependencies": {
     "ava": "^0.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-flow-runtime": "^0.15.0",
+    "babel-preset-flow": "^6.23.0",
+    "backpack-core": "^0.4.3",
     "eslint": "^4.11.0",
+    "eslint-config-cleanjs": "^4.0.0",
     "eslint-config-prettier": "^2.7.0",
     "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "flow-bin": "^0.59.0",
+    "flow-runtime": "^0.16.0",
+    "nodemon": "^1.12.1",
     "prettier": "^1.8.2"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "extends": [
       "cleanjs",
-      "prettier"
+      "prettier",
+      "plugin:flowtype/recommended"
     ],
     "plugins": [
+      "flowtype",
       "prettier"
     ],
     "rules": {
@@ -54,6 +70,7 @@
   },
   "babel": {
     "presets": [
+      "flow",
       [
         "env",
         {
@@ -67,7 +84,11 @@
       ]
     ],
     "plugins": [
-      "transform-export-default"
+      ["flow-runtime", {
+        "assert": true,
+        "annotate": true
+      }],
+      "add-module-exports"
     ]
   }
 }

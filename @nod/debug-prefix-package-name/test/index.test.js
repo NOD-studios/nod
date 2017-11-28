@@ -1,24 +1,23 @@
-const {
-  debugInternal,
-  getPackageName,
-  defaultTemplate,
-} = require('../lib')
-const prefixDebugWithPackageName = require('../')
-const test = require('ava')
-const packageName = require('./package.json').name
+/* eslint fp/no-unused-expression:0 */
 
-const extraPrefix = 'test'
-const templateString = defaultTemplate(extraPrefix, packageName)
+import { debugInternal, getPackageName, defaultTemplate } from "../build/lib";
 
+import prefixDebugWithPackageName from "../";
+import test from "ava";
+import { name as packageName } from "./package.json";
 
-test('getPackageName', t => t.is(packageName, getPackageName(__dirname)))
+const extraPrefix = "test";
+const templateString = defaultTemplate(extraPrefix, packageName);
 
-test('should prefix properly', t =>
-    prefixDebugWithPackageName(
-      extraPrefix,
-      defaultTemplate,
-      debugName => {
-        debugInternal({debugName, templateString})
-        return t.is(debugName, templateString)
-      },
-      packageName))
+test("getPackageName", t => t.is(packageName, getPackageName(__dirname)));
+
+test("should prefix properly", t =>
+  prefixDebugWithPackageName(
+    extraPrefix,
+    defaultTemplate,
+    debugName => {
+      debugInternal({ debugName, templateString });
+      return t.is(debugName, templateString);
+    },
+    packageName
+  ));
