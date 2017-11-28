@@ -1,6 +1,6 @@
 {
   "name": "@nod/debug-with-package-name",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Auto prefixes debug module with package name",
   "main": "./build/index.js",
   "scripts": {
@@ -84,10 +84,13 @@
       ]
     ],
     "plugins": [
-      ["flow-runtime", {
-        "assert": true,
-        "annotate": true
-      }],
+      [
+        "flow-runtime",
+        {
+          "assert": true,
+          "annotate": true
+        }
+      ],
       "add-module-exports"
     ]
   }
