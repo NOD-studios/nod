@@ -15,6 +15,9 @@ export const defaultTemplate = (
 ): string => debugInternal(join(packagePrefix, extraPrefix), "defaultTemplate");
 
 export const getPackageName = (dir?: string = process.cwd()): string => {
-  const { pkg: { name: packageName } } = sync({ cwd: dir });
-  return debugInternal(packageName, "packageName");
+  const { pkg: { name } } = sync({ cwd: dir });
+  return debugInternal(
+    module && module.parent ? module.parent : name,
+    "packageName"
+  );
 };
