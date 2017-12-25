@@ -1,0 +1,13 @@
+{
+  "name": "@nod/nod",
+  "private": true,
+  "description": "Monorepo of NOD modules",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lerna": "^2.5.1"
+  }
+}
