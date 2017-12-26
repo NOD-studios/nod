@@ -21,7 +21,22 @@ linkLocalPackages()
 linkLocalPackages('path/to/look/for/the/local/packages')
 ```
 
-## test
-```bash
-npm test
-```
+## Scripts
+- ### `npm start`
+Starts auto build process
+
+- ### `npm test`
+Run test
+
+- ### `npm run build`
+Run module
+
+- ### `npm test-once`
+Run test without watch mode
+
+
+## Development and additional usage
+Please see [@nod/nod](https://github.com/NOD-studios/nod) monorepo
+
+## License
+Apache 2.0

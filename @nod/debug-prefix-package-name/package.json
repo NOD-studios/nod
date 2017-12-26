@@ -1,18 +1,28 @@
 {
   "name": "@nod/debug-with-package-name",
-  "version": "1.0.0",
+  "version": "0.0.0-1",
   "description": "Auto prefixes debug module with package name",
   "main": "./build/index.js",
+  "files": [
+    "build/index.js",
+    "build/index.map",
+    "build/lib.js",
+    "build/lib.map"
+  ],
   "scripts": {
-    "test": "ava --watch",
-    "test-once": "ava",
-    "build": "backpack",
-    "flow": "flow",
-    "start": "nodemon --watch \"./src\" --exec \"npm run build\""
+    "test": "npm start && ava --watch",
+    "test-once": "npm run build && ava",
+    "build": "backpack build",
+    "start": "nodemon --config \"./nodemon.json\" --exec \"npm run build\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NOD-studios/debug-prefix-package-name.git"
+    "url": "git+https://github.com/NOD-studios/nod.git"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/NOD-studios/nod#readme",
+  "bugs": {
+    "url": "https://github.com/NOD-studios/nod/issues"
   },
   "keywords": [
     "debug",
@@ -20,78 +30,23 @@
     "package",
     "name"
   ],
-  "author": "Furkan Tunali <furkan@nod.st>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/NOD-studios/debug-prefix-package-name/issues"
-  },
-  "homepage": "https://github.com/NOD-studios/debug-prefix-package-name#readme",
   "dependencies": {
-    "babel-plugin-add-module-exports": "^0.2.1",
     "debug": "^3.1.0",
     "debug-module-prefix": "^0.2.2",
+    "dotenv-safe": "^4.0.4",
+    "install": "^0.10.2",
+    "npm": "^5.6.0",
     "read-pkg-up": "^3.0.0"
   },
   "devDependencies": {
+    "@nod/link-local-packages": "^0.0.0-1",
+    "@nod/swiss-kase": "^0.0.0-1",
+    "@nod/webpack-config-presets": "^0.0.0-1",
     "ava": "^0.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.2",
-    "babel-plugin-flow-runtime": "^0.15.0",
-    "babel-preset-flow": "^6.23.0",
     "backpack-core": "^0.4.3",
-    "eslint": "^4.11.0",
-    "eslint-config-cleanjs": "^4.0.0",
-    "eslint-config-prettier": "^2.7.0",
-    "eslint-plugin-better": "^0.1.5",
-    "eslint-plugin-flowtype": "^2.39.1",
-    "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.3.1",
-    "flow-bin": "^0.59.0",
     "flow-runtime": "^0.16.0",
     "nodemon": "^1.12.1",
-    "prettier": "^1.8.2"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "cleanjs",
-      "prettier",
-      "plugin:flowtype/recommended"
-    ],
-    "plugins": [
-      "flowtype",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": "error",
-      "import/no-commonjs": 0
-    }
-  },
-  "babel": {
-    "presets": [
-      "flow",
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": [
-              "last 2 versions"
-            ],
-            "node": "current"
-          }
-        }
-      ]
-    ],
-    "plugins": [
-      [
-        "flow-runtime",
-        {
-          "assert": true,
-          "annotate": true
-        }
-      ],
-      "add-module-exports"
-    ]
+    "razzle": "^0.8.7",
+    "webpack-dotenv-plugin": "^2.0.2"
   }
 }

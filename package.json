@@ -1,13 +1,65 @@
 {
   "name": "@nod/nod",
   "private": true,
-  "description": "Monorepo of NOD modules",
+  "description": "Monorepo of @nod/modules",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "reinstall": "npm run purge && npm i",
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start --stream --parallel",
+    "test": "lerna run test --parallel --stream",
+    "test-once": "lerna run test-once --parallel --stream",
+    "build": "lerna run build --stream --parallel",
+    "lint": "eslint . --fix",
+    "exec": "lerna exec --stream --parallel",
+    "lint-watch": "lerna run lint --stream --parallel -- --watch",
+    "purge": "lerna clean --yes && rm -rf ./node_modules && rm -rf ./package-lock.json && rm -rf ./yarn.lock && rm -rf ./**/**/package-lock.json && rm -rf ./**/**/yarn.lock",
+    "clean": "lerna clean --yes",
+    "publish": "lerna publish",
+    "postinstall": "npm run link-global && npm run bootstrap",
+    "link-global": "lerna exec \"npm link\" --stream --parallel"
   },
-  "author": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NOD-studios/nod/issues"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOD-studios/nod.git"
+  },
+  "homepage": "https://github.com/NOD-studios/nod/tree/master/@nod/empty#readme",
   "dependencies": {
+    "flow-runtime": "^0.16.0",
     "lerna": "^2.5.1"
+  },
+  "eslintConfig": {
+    "extends": "@chantelle/chantelle"
+  },
+  "babel": {
+    "presets": [
+      "@chantelle/chantelle"
+    ],
+    "plugins": [
+      [
+        "flow-runtime",
+        {
+          "assert": true,
+          "annotate": true
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@chantelle/babel-preset-chantelle": "0.0.1-y.4",
+    "@chantelle/eslint-config-chantelle": "0.0.1-y.4",
+    "@chantelle/eslint-plugin-chantelle": "0.0.1-y.4",
+    "babel": "^6.23.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-flow-runtime": "^0.15.0",
+    "eslint": "^4.14.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "flow-bin": "^0.61.0",
+    "flow-typed": "^2.2.3",
+    "husky": "^0.14.3",
+    "prettier": "^1.9.2"
   }
 }

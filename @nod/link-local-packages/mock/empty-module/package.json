@@ -1,4 +1,10 @@
 {
   "name": "empty-module",
-  "private": true
+  "private": true,
+  "eslintConfig": {
+    "rules": {
+      "import/no-commonjs": 0,
+      "fp/no-mutation": 0
+    }
+  }
 }
