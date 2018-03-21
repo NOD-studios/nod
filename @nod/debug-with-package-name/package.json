@@ -1,0 +1,53 @@
+{
+  "name": "@nod/debug-with-package-name",
+  "version": "0.0.0-1",
+  "description": "Auto prefixes debug module with package name",
+  "module": "./src/index.js",
+  "main": "./build/index.js",
+  "files": [
+    "build/index.js",
+    "build/index.map",
+    "build/lib.js",
+    "build/lib.map"
+  ],
+  "scripts": {
+    "test": "yarn start && ava --watch",
+    "test-once": "yarn build && ava",
+    "build": "backpack build",
+    "start": "nodemon --config \"./nodemon.json\" --exec \"yarn build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOD-studios/nod.git"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/NOD-studios/nod#readme",
+  "bugs": {
+    "url": "https://github.com/NOD-studios/nod/issues"
+  },
+  "keywords": [
+    "debug",
+    "prefix",
+    "package",
+    "name"
+  ],
+  "dependencies": {
+    "debug": "^3.1.0",
+    "dotenv-safe": "^4.0.4",
+    "read-pkg-up": "^3.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "backpack-core": "^0.7.0",
+    "flow-bin": "^0.66.0",
+    "flow-runtime": "^0.16.0",
+    "flow-typed": "^2.3.0",
+    "nodemon": "^1.12.1"
+  },
+  "eslintIgnore": [
+    "bin",
+    "build",
+    "flow-typed",
+    "node_modules"
+  ]
+}

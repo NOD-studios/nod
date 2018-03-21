@@ -3,7 +3,7 @@
 Monorepo of @nod/modules
 - [@nod/swiss-kase](./@nod/swiss-kase)
 - [@nod/link-local-packages](./@nod/link-local-packages)
-- [@nod/debug-prefix-package-name](./@nod/debug-prefix-package-name)
+- [@nod/debug-with-package-name](./@nod/debug-with-package-name)
 
 ## Installation
 ```bash

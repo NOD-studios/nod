@@ -1,0 +1,54 @@
+{
+  "name": "@nod/link-local-packages",
+  "version": "0.0.0-1",
+  "description": "Reads dependencies and links them if they exist in the given or current path",
+  "main": "./build/main.js",
+  "scripts": {
+    "link-parent-bin": "link-parent-bin",
+    "test": "yarn start && ava --watch",
+    "test-once": "yarn build && ava",
+    "build": "backpack build",
+    "start": "nodemon --config \"./nodemon.json\" --exec \"yarn build\""
+  },
+  "keywords": [
+    "npm",
+    "link",
+    "symlink",
+    "local",
+    "dependency",
+    "management"
+  ],
+  "bugs": {
+    "url": "https://github.com/NOD-studios/nod/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOD-studios/nod.git"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "backpack-core-yarn-workspaces": "^0.6.3",
+    "commander": "^2.11.0",
+    "debug": "^3.1.0",
+    "empty-module": "0.0.2",
+    "find-root": "^1.1.0",
+    "module-exists": "^0.1.1",
+    "ramda": "^0.25.0",
+    "webpack": "^3.11.0"
+  },
+  "devDependencies": {
+    "@nod/debug-with-package-name": "^0.0.0-1",
+    "ava": "^0.23.0",
+    "flow-bin": "^0.66.0",
+    "flow-typed": "^2.3.0"
+  },
+  "bin": {
+    "link-local-packages": "./bin/index.js"
+  },
+  "eslintIgnore": [
+    "bin",
+    "build",
+    "flow-typed",
+    "node_modules"
+  ]
+}

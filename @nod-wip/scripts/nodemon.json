@@ -1,0 +1,15 @@
+{
+  "ignore": [
+    ".git",
+    "nodemon.json",
+    "node_modules"
+  ],
+  "verbose": true,
+  "watch": [
+    "src",
+    "package.json",
+    ".env",
+    ".env.example"
+  ],
+  "ext": "js json env"
+}
