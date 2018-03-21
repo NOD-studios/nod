@@ -1,6 +1,6 @@
 {
   "name": "@nod/debug-with-package-name",
-  "version": "0.0.0-1",
+  "version": "1.0.1",
   "description": "Auto prefixes debug module with package name",
   "module": "./src/index.js",
   "main": "./build/index.js",
