@@ -1,6 +1,6 @@
 {
   "name": "@nod/debug-with-package-name",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auto prefixes debug module with package name",
   "module": "./src/index.js",
   "main": "./build/index.js",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "ava": "^0.23.0",
-    "backpack-core": "^0.7.0",
+    "backpack-core-temp": "^0.7.1",
     "flow-bin": "^0.66.0",
     "flow-runtime": "^0.16.0",
     "flow-typed": "^2.3.0",
