@@ -16,15 +16,15 @@
     "link-parent-bin": "link-parent-bin"
   },
   "devDependencies": {
-    "@nod/debug-with-package-name": "^0.0.0-1",
+    "@nod/debug-with-package-name": "^4.0.2",
     "webpack-dotenv-plugin": "^2.0.2"
   },
   "dependencies": {
-    "dotenv-safe": "^4.0.4",
-    "flow-bin": "^0.66.0",
+    "dotenv-safe": "^6.0.0",
+    "flow-bin": "^0.81.0",
     "flow-typed": "^2.3.0",
     "ramda": "^0.25.0",
-    "webpack": "^3.10.0"
+    "webpack": "^4.19.1"
   },
   "eslintIgnore": [
     "bin",
