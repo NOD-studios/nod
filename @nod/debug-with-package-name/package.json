@@ -33,15 +33,15 @@
   ],
   "dependencies": {
     "cross-env": "^5.1.4",
-    "debug": "^3.1.0",
-    "dotenv-safe": "^4.0.4",
-    "read-pkg-up": "^3.0.0"
+    "debug": "^4.0.1",
+    "dotenv-safe": "^6.0.0",
+    "read-pkg-up": "^4.0.0"
   },
   "devDependencies": {
-    "ava": "^0.23.0",
+    "ava": "^0.25.0",
     "backpack-core-temp": "^0.7.1",
-    "flow-bin": "^0.66.0",
-    "flow-runtime": "^0.16.0",
+    "flow-bin": "^0.81.0",
+    "flow-runtime": "^0.17.0",
     "flow-typed": "^2.3.0",
     "nodemon": "^1.12.1"
   },
