@@ -1,0 +1,16 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "@nod-wip/empty/package.json",
+        "@nod-wip/link-local-packages/mock/empty-module/package.json",
+        "@nod-wip/link-local-packages/package.json",
+        "@nod-wip/scripts/package.json",
+        "@nod-wip/swiss-kase/package.json",
+        "@nod-wip/webpack-config-presets/package.json",
+        "@nod/debug-with-package-name/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
