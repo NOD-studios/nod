@@ -1,5 +1,7 @@
 # @nod/nod
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/NOD-studios/nod.svg)](https://greenkeeper.io/)
+
 Monorepo of @nod/modules
 - [@nod/swiss-kase](./@nod/swiss-kase)
 - [@nod/link-local-packages](./@nod/link-local-packages)
