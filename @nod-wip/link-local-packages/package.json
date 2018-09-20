@@ -29,17 +29,17 @@
   "dependencies": {
     "backpack-core-yarn-workspaces": "^0.6.3",
     "commander": "^2.11.0",
-    "debug": "^3.1.0",
+    "debug": "^4.0.1",
     "empty-module": "0.0.2",
     "find-root": "^1.1.0",
-    "module-exists": "^0.1.1",
+    "module-exists": "^0.2.1",
     "ramda": "^0.25.0",
-    "webpack": "^3.11.0"
+    "webpack": "^4.19.1"
   },
   "devDependencies": {
-    "@nod/debug-with-package-name": "^0.0.0-1",
-    "ava": "^0.23.0",
-    "flow-bin": "^0.66.0",
+    "@nod/debug-with-package-name": "^4.0.2",
+    "ava": "^0.25.0",
+    "flow-bin": "^0.81.0",
     "flow-typed": "^2.3.0"
   },
   "bin": {
